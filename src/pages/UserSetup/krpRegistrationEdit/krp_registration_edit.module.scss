@@ -1,0 +1,26 @@
+.box {
+  margin: 100px;
+  padding: 20px;
+}
+.rowStyling {
+  background: #cbd4ee;
+}
+.emailColumn {
+  color: rgb(72, 125, 194);
+  text-decoration: underline;
+}
+
+.btnBox {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 10px;
+}
+.password{
+display: flex;
+width: 350px;
+border: 1px solid #ccc;
+}
+.passwordToggle{
+  margin-left: 3px;
+ 
+}

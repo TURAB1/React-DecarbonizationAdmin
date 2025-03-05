@@ -1,0 +1,32 @@
+.inputNum {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  box-sizing: border-box;
+  &:focus-within {
+    border: 1px solid #3466ff;
+  }
+
+  &:has(.inputNum__input:disabled) {
+    border: 1px solid #bebebe;
+  }
+
+  &__input {
+    width: 100%;
+    height: 35px;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 0 15px;
+    text-align: right;
+    background-color: #fff;
+    &::placeholder {
+      color: #c8c8c8;
+      text-align: left;
+    }
+    &:disabled {
+      background-color: #e7e7e7;
+    }
+  }
+}

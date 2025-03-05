@@ -1,0 +1,13 @@
+.box {
+  display: flex;
+  justify-content: space-between;
+  &__inner {
+    width: calc(50% - 20px);
+  }
+}
+
+.chartBox {
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin-top: 12px;
+}

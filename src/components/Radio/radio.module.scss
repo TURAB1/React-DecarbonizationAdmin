@@ -1,0 +1,48 @@
+.radio{
+    &__input{
+        display: none;
+        &:checked + .radio__label::before{
+            background-image: url("../../assets/images/radio_active.png");
+        }
+
+        &:disabled + .radio__label{
+            cursor: default;
+        }
+
+        &:disabled + .radio__label::before{
+            background-image: url("../../assets/images/radio_disabled.png"); 
+        }
+
+        &:checked + .radio__label .radio__text{
+            color: #3466FF;
+        }   
+    }
+
+    &__label{
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        &::before{
+            content: "";
+            display: block;
+            min-width: 20px;
+            height: 20px;
+            background-image: url("../../assets/images/radio_nomal.png");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+    }
+
+    &__text{
+        color: #717171;
+        font-size: 14px;
+        font-weight: 500;
+        margin-left: 10px;
+    }
+
+}
+
+.radio + .radio{
+    margin-left: 20px;
+}

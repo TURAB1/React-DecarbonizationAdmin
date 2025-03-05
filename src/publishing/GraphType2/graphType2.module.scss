@@ -1,0 +1,30 @@
+.box{
+    display: flex;
+    &__big{
+        width: 70%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 539px;
+        border: 1px solid rgb(221, 221, 221);
+    }
+    &__right{
+        width: 30%;
+        margin-left: 32px;
+    }
+    &__inner{
+        height: calc(50% - 12px);
+        
+        &+&{
+            margin-top: 24px;
+        }
+    }
+    &__graph{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 8px;
+        height: calc(100% - 40px);
+        background-color: #F6F6F6;
+    }
+}

@@ -1,0 +1,56 @@
+.inputCalendar{
+    width: 100%;
+    height: 35px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+    &:focus-within{
+        border: 1px solid #3466FF;
+        input[type="date"]::-webkit-calendar-picker-indicator{
+            background-image: url("../../assets/images/icon_input_date_active.png");
+        }
+    }
+
+    &:has(.inputCalendar__input:disabled){
+        display: flex;
+        align-items: center;
+        border: 1px solid #BEBEBE;
+        background-color: #E7E7E7;
+        
+        &::after{
+            content: "";
+            display: block;
+            min-width: 24px;
+            height: 24px;
+            background-image: url("../../assets/images/icon_input_date_nomal.png");
+            background-size: 18px 20px;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin-right: 6px;
+        }
+    }
+
+    &__input{
+        width: 100%;
+        height: 100%;
+        font-size: 14px;
+        font-weight: 500;
+        padding: 10px 4px 10px 15px;
+        background-color: #fff;
+        &::placeholder{
+            color: #C8C8C8;
+            text-align: left;
+        }
+        &:disabled{
+            background-color: #E7E7E7;
+        }
+    }
+    input[type="date"]::-webkit-calendar-picker-indicator{
+        min-width: 24px;
+        height: 24px;
+        background-image: url("../../assets/images/icon_input_date_nomal.png");
+        background-size: 18px 20px;
+        background-position: center;
+        cursor: pointer;
+    }
+}

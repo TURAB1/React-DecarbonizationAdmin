@@ -1,0 +1,57 @@
+.select-container {
+    position: relative;
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+
+    &:focus-within{
+        border: 1px solid #3466FF;
+        &::after{
+            background-image: url("../../assets/images/arrow_drop_up.png");
+        }
+    }
+}
+
+.select-container.focus {
+    border-color: #4caf50;
+}
+
+.select {
+    width: 100%;
+    padding: 6px 12px;
+    border: 0;
+    background-color: white;
+    font-size: 14px;
+    cursor: pointer;
+    appearance: none;
+}
+
+/* 화살표 스타일 (커스텀) */
+.select-container::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    width: 10px;
+    height: 12px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: #666;
+    
+    background-image: url("../../assets/images/arrow_drop_down.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+/* 활성화 상태 */
+.select:focus {
+    border-color: #3466FF;
+    outline: none;
+}
+
+/* 비활성화 상태 */
+.select:disabled {
+    background-color: #f0f0f0;
+    cursor: not-allowed;
+}

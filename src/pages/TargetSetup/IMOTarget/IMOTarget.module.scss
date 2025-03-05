@@ -1,0 +1,42 @@
+.box {
+  display: flex;
+}
+
+.chartBox {
+  width: calc(100% - 318px);
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+
+.box2 {
+  width: 318px;
+  padding: 32px 46px;
+  background-color: #f6f6f6;
+  margin-right: 20px;
+}
+
+.tit {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 14px;
+  margin-right: 10px;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  & + & {
+    margin-top: 32px;
+  }
+}
+
+.btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.percent {
+  margin-left: 10px;
+}

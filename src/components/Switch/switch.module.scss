@@ -1,0 +1,60 @@
+.switch {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.switch__input {
+    display: none;
+}
+
+.switch__label {
+    width: 36px;
+    height: 20px;
+    background-color: #ccc;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.switch__slider {
+    width: 16px;
+    height: 16px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    left: 2px;
+    transition: transform 0.3s;
+    box-shadow: 1px 1px 1px 0px #00000033;
+}
+
+/* 체크되었을 때 */
+.switch__input:checked + .switch__label {
+    background-color: #3466FF;
+    color: #3466FF;
+}
+
+.switch__input:checked + .switch__label .switch__slider {
+    transform: translateX(16px);
+}
+
+.switch__input:checked + .switch__label + .switch__text {
+    color: #3466FF;
+}
+
+/* 비활성화 상태 */
+.switch__input:disabled + .switch__label {
+    background-color: #ddd;
+    cursor: not-allowed;
+}
+
+.switch__text{
+    color: #333F54;
+}
+
+.switch + .switch{
+    margin-left: 24px
+}

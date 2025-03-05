@@ -1,0 +1,32 @@
+.tabs {
+    display: flex;
+    border-bottom: 1px solid #ccc;
+}
+
+.tab {
+    padding: 12px 0;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 15px;
+    text-align: center;
+    border-bottom: 4px solid #fff;
+    color: #898989;
+}
+
+.tab + .tab{
+    margin-left: 16px;
+}
+
+.tabs--blue .tab.active{
+    color: #3466FF;
+    border-bottom: 4px solid #3466FF;
+}
+
+.tabs--green .tab.active{
+    color: #09976E;
+    border-bottom: 4px solid #09976E;
+}
+
+.tab.active {
+
+}

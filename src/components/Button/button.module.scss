@@ -1,0 +1,187 @@
+/* button.module.scss */
+.btn {
+    border: none;
+    border-radius: 3px;
+    line-height: 1;
+    box-sizing: border-box;
+    cursor: pointer;
+
+    &:disabled {
+        border: 1px solid #ccc;
+        background-color: #ccc;
+        color: #fff;
+    }
+    &:hover{
+        &:disabled{
+            cursor: default;
+            border: 1px solid #ccc;
+            background-color: #ccc;
+        }
+    }
+
+    &+&{
+        margin-left: 8px;
+    }
+
+    &--blue {
+        border: 1px solid #3466FF;
+        background-color: #3466FF;
+        color: white;
+    
+        &:hover{
+            border: 1px solid #1C49D3;
+            background-color: #1C49D3;
+        }
+    }
+
+    &--lineBlue {
+        border: 1px solid #A6CBFF;
+        background-color: #fff;
+        color: #086BC4;
+    
+        &:hover{
+            background-color: #EFF5FD;
+        }
+    }
+    
+    &--green {
+        border: 1px solid #09976E;
+        background-color: #09976E;
+        color: white;
+    
+        &:hover{
+            border: 1px solid #077757;
+            background-color: #077757;
+        }
+    }
+    
+    &--lineGreen {
+        border: 1px solid #09976E;
+        color: #09976E;
+    
+        &:hover{
+            background-color: #E5F9EF;
+        }
+    }
+    
+    &--apply {
+        display: flex;
+        align-items: center;
+        &::before{
+            content: "";
+            display: block;
+            min-width: 24px;
+            height: 24px;
+            margin-right: 4px;
+            background-image: url("../../assets/images/icon_btn_apply.png");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+    }
+
+    &--upload {
+        display: flex;
+        align-items: center;
+        &::before{
+            content: "";
+            display: block;
+            min-width: 24px;
+            height: 24px;
+            margin-right: 4px;
+            background-image: url("../../assets/images/icon_btn_upload.png");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+    }
+    &--export {
+        display: flex;
+        align-items: center;
+        &::before{
+            content: "";
+            display: block;
+            min-width: 24px;
+            height: 24px;
+            margin-right: 4px;
+            background-image: url("../../assets/images/icon_btn_export.png");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+    }
+    
+    
+    &--blueClose{
+        display: flex;
+        align-items: center;
+        padding: 8px;
+        height: 30px;
+        background-color: #EFF5FD;
+        border: 1px solid #EFF5FD;
+        color: #3466FF;
+    
+        &::after{
+            content: "";
+            display: block;
+            width: 18px;
+            height: 18px;
+            background-image: url("../../assets/images/icon_btn_blue_close.png");
+            margin-left: 8px;
+        }
+        &:hover{
+            border: 1px solid #E7E7E7;
+            background-color: #F6F6F6;
+            color: #717171;
+            &::after{
+                background-image: url("../../assets/images/icon_btn_gray_close.png");
+            }
+        }
+    }
+    
+    &--greenClose{
+        display: flex;
+       align-items: center;
+        padding: 8px;
+        height: 30px;
+        background-color: #E5F9EF;
+        border: 1px solid #E5F9EF;
+        color: #2D876D;
+    
+        &::after{
+            content: "";
+            display: block;
+            width: 18px;
+            height: 18px;
+            background-image: url("../../assets/images/icon_btn_green_close.png");
+            margin-left: 8px;
+        }
+        &:hover{
+            border: 1px solid #E7E7E7;
+            background-color: #F6F6F6;
+            color: #717171;
+            &::after{
+                background-image: url("../../assets/images/icon_btn_gray_close.png");
+            }
+        }
+    }
+    
+    /* Sizes */
+    &--small {
+        min-width: 39px;
+        padding: 7px 8px;
+        font-size: 12px;
+        font-weight: 500;
+    }
+    
+    &--medium {
+        min-width: 58px;
+        height: 34px;
+        padding: 4px 12px;
+        font-size: 14px;
+        font-weight: 600;
+    }
+}
+
+
+

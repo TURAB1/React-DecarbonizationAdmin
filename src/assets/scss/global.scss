@@ -1,0 +1,376 @@
+/* styles/global.scss */
+@import "./reset";
+@import "./variables";
+@import "./mixins";
+@import "./font";
+
+* {
+  box-sizing: border-box;
+}
+
+.wrap {
+  position: relative;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+  font-family: "NotoSansKR", sans-serif;
+}
+
+.container {
+  width: 100%;
+}
+
+.select {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  padding: 6px 12px;
+  background-color: white;
+  font-size: 14px;
+  cursor: pointer;
+  appearance: none;
+
+  color: var(--gray_0, #333);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: normal;
+
+  -moz-appearance: none; /* Firefox */
+  -webkit-appearance: none; /* Safari and Chrome */
+  appearance: none;
+
+  background-image: url("../../assets/images/arrow_drop_down.png");
+  background-position: calc(100% - 8px) center;
+  background-repeat: no-repeat;
+}
+
+.radio {
+  &__input {
+    display: none;
+    &:checked + .radio__label::before {
+      background-image: url("../../assets/images/radio_active.png");
+    }
+    &:checked + .radio__label .radio__text {
+      color: var(--th_bg, #09976e);
+    }
+  }
+
+  &__label {
+    display: flex;
+    align-items: center;
+
+    &::before {
+      content: "";
+      display: block;
+      min-width: 20px;
+      height: 20px;
+      background-image: url("../../assets/images/radio_nomal.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      margin-right: 6px;
+    }
+  }
+
+  &__text {
+    color: var(--gray_0, #333);
+    font-size: 14px;
+    font-weight: 500;
+  }
+}
+
+.radio + .radio {
+  margin-left: 20px;
+}
+
+.flex {
+  display: flex;
+}
+
+.subPage {
+  max-width: 1634px;
+  margin: 0 auto;
+  padding: 46px 48px;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 28px;
+  letter-spacing: -0.5px;
+  color: #1c2536;
+}
+
+.subTitle {
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 28px;
+  letter-spacing: -0.5px;
+  color: #36599a;
+}
+
+.headline {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 18px;
+  color: #0458f9;
+}
+
+.sample {
+  padding: 48px;
+}
+
+.titleBox {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  &--type1 {
+    margin-bottom: 26px;
+  }
+}
+
+.grayBox {
+  width: 100%;
+  background: #f6f6f6;
+  padding: 16px 32px;
+  margin-bottom: 16px;
+  &__line {
+    display: flex;
+    justify-content: space-between;
+    & + & {
+      margin-top: 16px;
+    }
+  }
+  &__inner {
+    display: flex;
+  }
+  &__box {
+    display: flex;
+    align-items: center;
+    & + & {
+      margin-left: 64px;
+    }
+  }
+  &__tit {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 14px;
+    color: #1c2536;
+    margin-right: 10px;
+  }
+
+  &__calendar {
+    display: flex;
+    align-items: center;
+    &-wave {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 14px;
+      color: #1c2536;
+      margin: 0 10px;
+    }
+  }
+  &__inputSearch {
+    display: flex;
+    align-items: center;
+    > div {
+      & + div {
+        margin-left: 10px;
+      }
+    }
+  }
+  &__switch {
+    display: flex;
+  }
+}
+
+.btnBox {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.vertical-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 16px;
+  border-top: 1px solid #e7e7e7;
+}
+
+.vertical-table th,
+.vertical-table td {
+  border-bottom: 1px solid #e7e7e7;
+  padding: 12px;
+  text-align: left;
+}
+
+.vertical-table th {
+  background: #f6f6f6;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 14px;
+  letter-spacing: 0px;
+  color: #333f54;
+}
+
+.vertical-table td {
+  padding: 6px 16px;
+  background-color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: -0.5px;
+  color: #333;
+}
+
+.horizontal-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 16px;
+}
+
+.horizontal-table th,
+.horizontal-table td {
+  border-bottom: 1px solid #e7e7e7;
+  height: 42px;
+  padding: 0 8px;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: -0.5px;
+  color: #333;
+}
+
+.horizontal-table th {
+  background: #1b4896;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 41px;
+  letter-spacing: 0px;
+  color: #fff;
+  text-align: center;
+}
+
+.horizontal-table td {
+  padding: 0 16px;
+  line-height: 40px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.horizontal-table2 {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 16px;
+}
+
+.horizontal-table2 th,
+.horizontal-table2 td {
+  border-bottom: 1px solid #e7e7e7;
+  height: 42px;
+  padding: 0 8px;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: -0.5px;
+  color: #333;
+}
+
+.horizontal-table2 th {
+  background: #daecfb;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 41px;
+  letter-spacing: 0px;
+  color: #037be1;
+  text-align: center;
+}
+
+.horizontal-table2 td {
+  padding: 0 16px;
+  line-height: 40px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.horizontal-table3 {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 16px;
+}
+
+.horizontal-table3 th,
+.horizontal-table3 td {
+  border-bottom: 1px solid #e7e7e7;
+  height: 42px;
+  padding: 0 8px;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: -0.5px;
+  color: #333;
+  vertical-align: middle;
+}
+
+.horizontal-table3 th {
+  background: #1b4896;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0px;
+  color: #fff;
+  text-align: center;
+}
+
+.horizontal-table3 td {
+  border-right: 1px solid #e7e7e7;
+  padding: 0 16px;
+  line-height: 40px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.horizontal-table3 td:last-child {
+  border-right: 0;
+}
+
+.horizontal-table4 {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 16px;
+}
+
+.horizontal-table4 th,
+.horizontal-table4 td {
+  border-bottom: 1px solid #e7e7e7;
+  height: 42px;
+  padding: 0 8px;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: -0.5px;
+  color: #333;
+}
+
+.horizontal-table4 th {
+  background: #daecfb;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 41px;
+  letter-spacing: 0px;
+  color: #037be1;
+  text-align: center;
+}
+
+.horizontal-table4 td {
+  border-right: 1px solid #e7e7e7;
+  padding: 0 16px;
+  line-height: 40px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.horizontal-table4 td:last-child {
+  border-right: 0;
+}

@@ -1,0 +1,16 @@
+.boxs{
+    display: flex;
+    width: 100%;
+    margin-top: 100px;
+}
+
+.box{
+    width: 50%;
+    &+&{
+        margin-left: 50px;
+    }
+}
+
+.pagination{
+    margin-top: 40px;
+}
